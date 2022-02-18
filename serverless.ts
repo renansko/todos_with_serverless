@@ -46,21 +46,19 @@ const serverlessConfiguration: AWS = {
         }
       ]
     },
-    getTodos:{
-      handler: "src/functions/getTodos.handler",
-      events: [
-        {
-          http: {
-            path: "getTodos/{id}",
-            method: "get",
+      getTodos:{
+        handler: "src/functions/getTodos.handler",
+        events: [
+          {
+            http: {
+              path: "getTodos/{id}",
+              method: "get",
 
-            cors: true,
+              cors: true,
+            }
           }
-        }
-      ]
-    }
-
-    }
+        ]
+      }
   },
   custom: {
     esbuild: {
